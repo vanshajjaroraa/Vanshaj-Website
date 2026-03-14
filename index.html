@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanshaj Arora | Software Engineer</title>
+  <script>
+    (() => {
+      const saved = localStorage.getItem("theme");
+      const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+      const theme = saved || (prefersLight ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══ SCROLL PROGRESS ═══ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ═══ CURSOR GLOW ═══ -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ═══ BACKGROUND ═══ -->
+  <div class="bg-blur b1"></div>
+  <div class="bg-blur b2"></div>
+  <div class="bg-blur b3"></div>
+  <div class="particle-overlay"></div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <header class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">VA</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#hero" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a href="Vanshaj CV.pdf" download class="nav-cv-btn">Download CV</a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle day and night mode">
+        <span class="theme-toggle-icon" id="themeToggleIcon">🌙</span>
+        <span class="theme-toggle-label" id="themeToggleLabel">Night</span>
+      </button>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══ MOBILE NAV ═══ -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" type="button" aria-label="Toggle day and night mode">
+      <span class="theme-toggle-icon" id="themeToggleIconMobile">🌙</span>
+      <span class="theme-toggle-label" id="themeToggleLabelMobile">Night Mode</span>
+    </button>
+  </div>
+
+  <main>
+
+    <!-- ═══ 00 · HERO ═══ -->
+    <section id="hero" class="sect sect-hero">
+      <div class="hero-content reveal">
+        <p class="hero-hello">Hello, I'm <span class="wave">👋</span></p>
+        <h1 class="hero-name">Vanshaj Arora</h1>
+        <p class="hero-typed">I'm a <span class="typed" id="typed"></span><span class="typed-cursor">|</span></p>
+        <p class="hero-bio">
+          Driven Computer Engineering student at the University at Buffalo.
+          I build reliable software and systems with precision, depth, and product-level polish.
+          Seeking internship and co-op opportunities.
+        </p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-glow">Let's Connect</a>
+          <a href="#projects" class="btn-outline">View My Work</a>
+          <a href="Vanshaj CV.pdf" download class="btn-outline">Download CV</a>
+        </div>
+      </div>
+      <div class="scroll-hint reveal">
+        <span>Scroll to explore</span>
+        <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+      </div>
+    </section>
+
+    <!-- ═══ 01 · ABOUT ═══ -->
+    <section id="about" class="sect">
+      <div class="sect-inner reveal">
+        <p class="sect-num">01</p>
+        <h2 class="sect-title">About Me</h2>
+        <p class="sect-sub">Discover my journey, passion, and expertise</p>
+
+        <div class="about-body">
+          <p>
+            I'm a dedicated Computer Engineering student at the University at Buffalo.
+            My journey in technology has been driven by curiosity and a passion for building
+            impactful, polished digital products. Replace this paragraph with your actual story.
+          </p>
+          <p>
+            With experience in software development, systems design, and data engineering,
+            I bridge the gap between technical depth and user-friendly execution.
+            Beyond coding, I value clean architecture, team collaboration, and shipping
+            things that actually work. Replace with your real bio.
+          </p>
+        </div>
+
+        <div class="about-cards">
+          <div class="about-card glass-card">
+            <div class="about-card-icon">🎓</div>
+            <h4>Education</h4>
+            <p>University at Buffalo — Computer Engineering</p>
+          </div>
+          <div class="about-card glass-card">
+            <div class="about-card-icon">🚀</div>
+            <h4>Projects</h4>
+            <p>12+ Successful Implementations</p>
+          </div>
+          <div class="about-card glass-card">
+            <div class="about-card-icon">💡</div>
+            <h4>Focus</h4>
+            <p>Systems · Software · Product</p>
+          </div>
+        </div>
+
+        <div class="about-pills">
+          <span>Frontend</span>
+          <span>Backend</span>
+          <span>Data Engineering</span>
+          <span>Systems Design</span>
+          <span>DevOps</span>
+          <span>ML/AI</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 02 · EXPERIENCE ═══ -->
+    <section id="experience" class="sect">
+      <div class="sect-inner reveal">
+        <p class="sect-num">02</p>
+        <h2 class="sect-title">Experience</h2>
+        <p class="sect-sub">My professional journey and achievements</p>
+
+        <div class="exp-list">
+
+          <article class="exp-card glass-card">
+            <div class="exp-header">
+              <div>
+                <h3>Placeholder Role — Software Intern</h3>
+                <p class="exp-org">Placeholder Company Name</p>
+                <p class="exp-date">Summer 2025</p>
+              </div>
+              <span class="exp-badge badge-current">Current</span>
+            </div>
+            <p class="exp-desc">
+              Placeholder description of your role and responsibilities. Describe what you
+              built, the impact you made, and the technologies involved. Replace this manually.
+            </p>
+            <div class="exp-highlights">
+              <h4>Key Achievements</h4>
+              <ul>
+                <li>Placeholder achievement — describe impact with numbers</li>
+                <li>Placeholder achievement — describe a system or feature you built</li>
+                <li>Placeholder achievement — describe collaboration or process improvement</li>
+              </ul>
+            </div>
+            <div class="pill-row">
+              <span>Python</span><span>React</span><span>SQL</span><span>Docker</span>
+            </div>
+          </article>
+
+          <article class="exp-card glass-card">
+            <div class="exp-header">
+              <div>
+                <h3>Placeholder Role — Teaching Assistant</h3>
+                <p class="exp-org">University at Buffalo</p>
+                <p class="exp-date">Fall 2024 – Present</p>
+              </div>
+              <span class="exp-badge badge-edu">Education</span>
+            </div>
+            <p class="exp-desc">
+              Placeholder description. Describe what you taught, how many students you
+              supported, and the subject matter. Replace with your real experience.
+            </p>
+            <div class="exp-highlights">
+              <h4>Key Responsibilities</h4>
+              <ul>
+                <li>Placeholder responsibility</li>
+                <li>Placeholder responsibility</li>
+                <li>Placeholder responsibility</li>
+              </ul>
+            </div>
+            <div class="pill-row">
+              <span>Teaching</span><span>Grading</span><span>Communication</span>
+            </div>
+          </article>
+
+          <article class="exp-card glass-card">
+            <div class="exp-header">
+              <div>
+                <h3>Placeholder Role — Research Assistant</h3>
+                <p class="exp-org">Placeholder Lab, University at Buffalo</p>
+                <p class="exp-date">Jan 2025 – May 2025</p>
+              </div>
+              <span class="exp-badge badge-research">Research</span>
+            </div>
+            <p class="exp-desc">
+              Placeholder research description. Describe the lab, the project, your
+              contributions, and key findings. Replace manually.
+            </p>
+            <div class="pill-row">
+              <span>Python</span><span>Data Analysis</span><span>ML</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 03 · LEADERSHIP ═══ -->
+    <section id="leadership" class="sect">
+      <div class="sect-inner reveal">
+        <p class="sect-num">03</p>
+        <h2 class="sect-title">Leadership</h2>
+        <p class="sect-sub">Driving initiatives and inspiring teams</p>
+
+        <div class="lead-grid">
+
+          <article class="lead-card glass-card">
+            <h3>Placeholder Leadership Title</h3>
+            <p class="lead-org">Placeholder Organization</p>
+            <p class="lead-date">2024 – Present</p>
+            <p class="lead-desc">
+              Placeholder description of leadership role. Describe what you organized,
+              who you led, and the outcomes you delivered.
+            </p>
+            <div class="lead-stats">
+              <div class="lead-stat">
+                <strong>50+</strong>
+                <span>Members</span>
+              </div>
+              <div class="lead-stat">
+                <strong>10+</strong>
+                <span>Events</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="lead-card glass-card">
+            <h3>Placeholder Mentor Role</h3>
+            <p class="lead-org">Placeholder Organization</p>
+            <p class="lead-date">2024 – 2025</p>
+            <p class="lead-desc">
+              Placeholder description of mentoring role. Describe scope and impact.
+            </p>
+            <div class="lead-stats">
+              <div class="lead-stat">
+                <strong>100+</strong>
+                <span>Mentored</span>
+              </div>
+              <div class="lead-stat">
+                <strong>20+</strong>
+                <span>Programs</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 04 · PROJECTS ═══ -->
+    <section id="projects" class="sect">
+      <div class="sect-inner reveal">
+        <p class="sect-num">04</p>
+        <h2 class="sect-title">Featured Projects</h2>
+        <p class="sect-sub">Innovative solutions that make a difference</p>
+
+        <div class="proj-filters">
+          <button class="proj-filter active" data-filter="all" type="button">All Projects</button>
+          <button class="proj-filter" data-filter="web" type="button">Web</button>
+          <button class="proj-filter" data-filter="data" type="button">Data Science</button>
+          <button class="proj-filter" data-filter="systems" type="button">Systems</button>
+        </div>
+
+        <div class="proj-grid">
+
+          <article class="proj-card glass-card" data-cat="web data">
+            <div class="proj-visual">
+              <div class="proj-icon">📊</div>
+            </div>
+            <div class="proj-body">
+              <span class="proj-tag">Web · Data</span>
+              <h3>Smart Study Planner</h3>
+              <p>
+                A productivity app that generates optimized study schedules based on deadlines,
+                difficulty, and available time blocks. Replace with your real project.
+              </p>
+              <div class="pill-row">
+                <span>Python</span><span>React</span><span>SQL</span><span>TailwindCSS</span>
+              </div>
+              <div class="proj-stats">
+                <div class="proj-stat"><strong>96%</strong><span>Accuracy</span></div>
+                <div class="proj-stat"><strong>500+</strong><span>Users</span></div>
+              </div>
+              <div class="proj-actions">
+                <a href="#contact">Request Demo</a>
+                <a href="#" onclick="return false;">Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card glass-card" data-cat="web">
+            <div class="proj-visual">
+              <div class="proj-icon">🌐</div>
+            </div>
+            <div class="proj-body">
+              <span class="proj-tag">Web App</span>
+              <h3>Campus Event Explorer</h3>
+              <p>
+                A web interface that helps students discover campus events by category,
+                popularity, and interests. Replace with your real project description.
+              </p>
+              <div class="pill-row">
+                <span>JavaScript</span><span>Node.js</span><span>MongoDB</span>
+              </div>
+              <div class="proj-stats">
+                <div class="proj-stat"><strong>Real-time</strong><span>Updates</span></div>
+                <div class="proj-stat"><strong>Mobile</strong><span>Responsive</span></div>
+              </div>
+              <div class="proj-actions">
+                <a href="#contact">Request Demo</a>
+                <a href="#" onclick="return false;">Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card glass-card" data-cat="systems data">
+            <div class="proj-visual">
+              <div class="proj-icon">⚡</div>
+            </div>
+            <div class="proj-body">
+              <span class="proj-tag">Systems · Analytics</span>
+              <h3>Sensor Data Dashboard</h3>
+              <p>
+                Interactive dashboard for visualizing and monitoring engineering sensor streams
+                with real-time trend tracking and alert states. Replace with your actual project.
+              </p>
+              <div class="pill-row">
+                <span>Python</span><span>C++</span><span>WebSocket</span><span>D3.js</span>
+              </div>
+              <div class="proj-stats">
+                <div class="proj-stat"><strong>60%</strong><span>Faster</span></div>
+                <div class="proj-stat"><strong>Real-time</strong><span>Streaming</span></div>
+              </div>
+              <div class="proj-actions">
+                <a href="#contact">Request Demo</a>
+                <a href="#" onclick="return false;">Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card glass-card" data-cat="systems">
+            <div class="proj-visual">
+              <div class="proj-icon">🔧</div>
+            </div>
+            <div class="proj-body">
+              <span class="proj-tag">Systems</span>
+              <h3>Placeholder Project</h3>
+              <p>
+                Your fourth project goes here. Describe the problem, approach,
+                and what you learned from building it. Replace manually.
+              </p>
+              <div class="pill-row">
+                <span>C++</span><span>Linux</span><span>Networking</span>
+              </div>
+              <div class="proj-stats">
+                <div class="proj-stat"><strong>Low</strong><span>Latency</span></div>
+                <div class="proj-stat"><strong>Scalable</strong><span>Design</span></div>
+              </div>
+              <div class="proj-actions">
+                <a href="#contact">Request Demo</a>
+                <a href="#" onclick="return false;">Source</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 05 · SKILLS ═══ -->
+    <section id="skills" class="sect">
+      <div class="sect-inner reveal">
+        <p class="sect-num">05</p>
+        <h2 class="sect-title">Skills &amp; Expertise</h2>
+        <p class="sect-sub">Technologies I work with</p>
+
+        <div class="skills-grid">
+
+          <div class="skill-block glass-card">
+            <h3>Frontend Development</h3>
+            <div class="skill-bar-group">
+              <div class="skill-bar-item">
+                <div class="skill-bar-top"><span>React / Next.js</span><span>90%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:90%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-top"><span>JavaScript / TypeScript</span><span>88%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:88%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-top"><span>HTML5 / CSS3</span><span>92%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:92%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-block glass-card">
+            <h3>Backend Development</h3>
+            <div class="skill-bar-group">
+              <div class="skill-bar-item">
+                <div class="skill-bar-top"><span>Node.js / Express</span><span>85%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:85%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-top"><span>Python / Django</span><span>88%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:88%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-top"><span>SQL / NoSQL</span><span>82%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:82%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-block glass-card">
+            <h3>Data &amp; AI</h3>
+            <div class="skill-bar-group">
+              <div class="skill-bar-item">
+                <div class="skill-bar-top"><span>Data Analysis</span><span>90%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:90%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-top"><span>Machine Learning</span><span>80%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:80%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-top"><span>TensorFlow / PyTorch</span><span>75%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:75%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-block glass-card">
+            <h3>Cloud &amp; DevOps</h3>
+            <div class="skill-bar-group">
+              <div class="skill-bar-item">
+                <div class="skill-bar-top"><span>Docker / Git</span><span>82%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:82%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-top"><span>Linux / CLI</span><span>85%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:85%"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-top"><span>CI / CD</span><span>70%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:70%"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 06 · CONTACT ═══ -->
+    <section id="contact" class="sect">
+      <div class="sect-inner reveal">
+        <p class="sect-num">06</p>
+        <h2 class="sect-title">Let's Work Together</h2>
+        <p class="sect-sub">Ready to bring your ideas to life</p>
+
+        <div class="contact-grid">
+
+          <div class="contact-links">
+            <a href="mailto:vanshajarora@gmail.com" class="contact-link-card glass-card">
+              <h4>📧 Email</h4>
+              <p>vanshajarora@gmail.com</p>
+              <span class="cl-action">Send Message →</span>
+            </a>
+            <a href="https://linkedin.com/in/vanshaj" target="_blank" rel="noopener" class="contact-link-card glass-card">
+              <h4>💼 LinkedIn</h4>
+              <p>Connect professionally</p>
+              <span class="cl-action">View Profile →</span>
+            </a>
+            <a href="https://github.com/vanshaj" target="_blank" rel="noopener" class="contact-link-card glass-card">
+              <h4>🖥️ GitHub</h4>
+              <p>Check out my code</p>
+              <span class="cl-action">View Repos →</span>
+            </a>
+          </div>
+
+          <form class="contact-form glass-card" id="contactForm">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input type="text" placeholder="Subject" />
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn-glow">Send Message</button>
+            <p class="form-note" id="formNote">This opens your email app with the message pre-filled.</p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Vanshaj Arora. Crafted with precision and purpose.</p>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" type="button">↑</button>
+
+  <script>
+    /* ── REFS ── */
+    const $ = (s) => document.querySelector(s);
+    const $$ = (s) => document.querySelectorAll(s);
+    const navbar          = $("#navbar");
+    const hamburger       = $("#hamburger");
+    const mobileNav       = $("#mobileNav");
+    const navLinks        = $$(".nav-links a, .mobile-nav a");
+    const scrollProgress  = $("#scrollProgress");
+    const cursorGlow      = $("#cursorGlow");
+    const backToTop       = $("#backToTop");
+    const revealEls       = $$(".reveal");
+    const filterBtns      = $$(".proj-filter");
+    const projCards       = $$(".proj-card");
+    const skillBars       = $$(".skill-bar-fill");
+    const contactForm     = $("#contactForm");
+    const formNote        = $("#formNote");
+    const themeToggle     = $("#themeToggle");
+    const themeToggleIcon = $("#themeToggleIcon");
+    const themeToggleLabel = $("#themeToggleLabel");
+    const themeToggleMobile = $("#themeToggleMobile");
+    const themeToggleIconMobile = $("#themeToggleIconMobile");
+    const themeToggleLabelMobile = $("#themeToggleLabelMobile");
+    const reduced         = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    /* ── TYPED EFFECT ── */
+    const roles = [
+      "Software Engineer",
+      "Computer Engineering Student",
+      "Systems Thinker",
+      "Product Builder",
+      "Full Stack Developer"
+    ];
+    let roleIdx = 0, charIdx = 0, deleting = false;
+    const typedEl = $("#typed");
+    function typeLoop() {
+      const current = roles[roleIdx];
+      if (!deleting) {
+        typedEl.textContent = current.substring(0, ++charIdx);
+        if (charIdx === current.length) { deleting = true; setTimeout(typeLoop, 1800); return; }
+        setTimeout(typeLoop, 70);
+      } else {
+        typedEl.textContent = current.substring(0, --charIdx);
+        if (charIdx === 0) { deleting = false; roleIdx = (roleIdx + 1) % roles.length; setTimeout(typeLoop, 400); return; }
+        setTimeout(typeLoop, 40);
+      }
+    }
+    typeLoop();
+
+    /* ── SCROLL ── */
+    const sections = $$("section[id]");
+    function onScroll() {
+      const sy = window.scrollY;
+      navbar.classList.toggle("scrolled", sy > 40);
+      backToTop.classList.toggle("visible", sy > 500);
+      const dh = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollProgress) scrollProgress.style.width = dh > 0 ? `${(sy / dh) * 100}%` : "0%";
+
+      let current = "";
+      sections.forEach((s) => {
+        if (sy >= s.offsetTop - 200) current = s.id;
+      });
+      navLinks.forEach((a) => {
+        a.classList.toggle("active", a.getAttribute("href") === `#${current}`);
+      });
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    /* ── HAMBURGER ── */
+    hamburger?.addEventListener("click", () => {
+      hamburger.classList.toggle("open");
+      mobileNav?.classList.toggle("open");
+    });
+    $$(".mobile-nav a").forEach((a) => a.addEventListener("click", () => {
+      hamburger?.classList.remove("open");
+      mobileNav?.classList.remove("open");
+    }));
+
+    /* ── BACK TO TOP ── */
+    backToTop?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    /* ── CURSOR GLOW ── */
+    if (cursorGlow && !reduced) {
+      window.addEventListener("pointermove", (e) => {
+        cursorGlow.style.transform = `translate(${e.clientX - 140}px,${e.clientY - 140}px)`;
+      });
+    }
+
+    /* ── THEME TOGGLE ── */
+    const setTheme = (theme) => {
+      const isLight = theme === "light";
+      document.documentElement.setAttribute("data-theme", isLight ? "light" : "dark");
+      localStorage.setItem("theme", isLight ? "light" : "dark");
+      if (themeToggleIcon) themeToggleIcon.textContent = isLight ? "☀️" : "🌙";
+      if (themeToggleLabel) themeToggleLabel.textContent = isLight ? "Day" : "Night";
+      if (themeToggleIconMobile) themeToggleIconMobile.textContent = isLight ? "☀️" : "🌙";
+      if (themeToggleLabelMobile) themeToggleLabelMobile.textContent = isLight ? "Day Mode" : "Night Mode";
+    };
+    const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
+    setTheme(currentTheme);
+    const toggleTheme = () => {
+      const now = document.documentElement.getAttribute("data-theme") || "dark";
+      setTheme(now === "dark" ? "light" : "dark");
+    };
+    themeToggle?.addEventListener("click", toggleTheme);
+    themeToggleMobile?.addEventListener("click", toggleTheme);
+
+    /* ── REVEAL ── */
+    if (!reduced) {
+      const rObs = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("revealed"); rObs.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      revealEls.forEach((el) => rObs.observe(el));
+
+      const sObs = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("filled"); sObs.unobserve(e.target); } });
+      }, { threshold: 0.3 });
+      skillBars.forEach((b) => sObs.observe(b));
+    } else {
+      revealEls.forEach((el) => el.classList.add("revealed"));
+      skillBars.forEach((b) => b.classList.add("filled"));
+    }
+
+    /* ── PROJECT FILTER ── */
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const f = btn.dataset.filter;
+        filterBtns.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        projCards.forEach((c) => {
+          const cat = c.dataset.cat || "";
+          c.classList.toggle("hidden", f !== "all" && !cat.includes(f));
+        });
+      });
+    });
+
+    /* ── SMOOTH INTERNAL LINKS ── */
+    $$("a[href^='#']").forEach((anchor) => {
+      anchor.addEventListener("click", (e) => {
+        const href = anchor.getAttribute("href");
+        if (!href || href === "#") return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        const y = target.getBoundingClientRect().top + window.scrollY - 72;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      });
+    });
+
+    /* ── CONTACT FORM (REAL ACTION) ── */
+    contactForm?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const fields = contactForm.querySelectorAll("input, textarea");
+      const name = fields[0].value.trim();
+      const email = fields[1].value.trim();
+      const subject = fields[2].value.trim() || "Portfolio Inquiry";
+      const message = fields[3].value.trim();
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+      window.location.href = `mailto:vanshajarora@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+      if (formNote) formNote.textContent = "Opening your email app...";
+    });
+  </script>
+
+</body>
+</html>
