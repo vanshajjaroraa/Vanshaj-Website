@@ -3,118 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio website of Vanshaj Arora, Computer Engineering student building impactful projects." />
-  <title>Vanshaj Arora | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="background-blur blur-one"></div>
-  <div class="background-blur blur-two"></div>
 
+  <!-- NAVBAR -->
   <header class="navbar">
-    <a href="#hero" class="logo">Vanshaj</a>
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a href="Vanshaj CV.pdf" download class="cv-btn">Download CV</a>
-  </header>
+  <div class="nav-container">
+    <div class="logo"> Welcome to Vanshaj's Website </div>
 
-  <main>
-    <section id="hero" class="section hero">
-      <p class="hero-kicker">Computer Engineering Student</p>
-      <h1>Building cool digital experiences that feel effortless.</h1>
-      <p class="hero-subtitle">
-        Hi, I am <span class="highlight">Vanshaj Arora</span> from the University at Buffalo.
-        I design and build software that is fast, clean, and useful in the real world.
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-secondary">Let's Connect</a>
-      </div>
-    </section>
+    <div class="nav-right">
+      <a href="Vanshaj Website/Vanshaj CV.pdf" download class="cv-btn">Vanshaj's CV</a>
+    </div>
+  </div>
+</header>
 
-    <section id="about" class="section card">
-      <h2>About Me</h2>
-      <p>
-        I am actively seeking internships and co-op opportunities where I can combine
-        engineering fundamentals with software, data, and system design to solve meaningful problems.
-      </p>
-      <div class="about-grid">
-        <div>
-          <h3>Education</h3>
-          <p>BS in Computer Engineering</p>
-          <p>University at Buffalo (SUNY)</p>
-        </div>
-        <div>
-          <h3>Details</h3>
-          <p>Expected Graduation: 2027</p>
-          <p>GPA: 3.4</p>
-        </div>
-      </div>
-    </section>
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <h1>Hi, I’m <span class="highlight">Vanshaj Arora</span></h1>
+    <p>
+  Computer Engineering Student at
+  <a href="https://www.buffalo.edu" target="_blank" class="school-link">
+    University at Buffalo
+  </a>
+</p>
+  </section>
 
-    <section id="skills" class="section">
-      <h2>Tech Stack</h2>
-      <div class="chips">
-        <span>Python</span>
-        <span>C++</span>
-        <span>Java</span>
-        <span>HTML/CSS</span>
-        <span>JavaScript</span>
-        <span>Git/GitHub</span>
-        <span>SQL</span>
-        <span>Data Structures</span>
-      </div>
-    </section>
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a Computer Engineering student at the University at Buffalo,
+      actively seeking internship and co-op opportunities.
+      I enjoy working with software, data, and engineering systems
+      to solve real-world problems.
+    </p>
 
-    <section id="projects" class="section">
-      <h2>Featured Projects</h2>
-      <div class="project-grid">
-        <article class="project-card">
-          <h3>Smart Study Planner</h3>
-          <p>
-            A productivity app that generates optimized study schedules based on deadlines,
-            course difficulty, and available time blocks.
-          </p>
-          <a href="#contact">Ask for Demo</a>
-        </article>
-        <article class="project-card">
-          <h3>Campus Event Explorer</h3>
-          <p>
-            A web interface that helps students discover campus events by category,
-            popularity, and personalized interests.
-          </p>
-          <a href="#contact">Ask for Demo</a>
-        </article>
-        <article class="project-card">
-          <h3>Sensor Data Dashboard</h3>
-          <p>
-            Interactive dashboard for visualizing and monitoring engineering sensor streams
-            with real-time trend tracking and alert states.
-          </p>
-          <a href="#contact">Ask for Demo</a>
-        </article>
-      </div>
-    </section>
+    <p>
+      <strong>Education:</strong><br>
+      BS in Computer Engineering — University at Buffalo (SUNY)<br>
+      Expected Graduation: 2027<br>
+      GPA: 3.4
+    </p>
+  </section>
 
-    <section id="contact" class="section card contact-card">
-      <h2>Let's Build Something Great</h2>
-      <p>
-        I am open to internship, co-op, and collaboration opportunities.
-      </p>
-      <a href="mailto:vanshajarora@email.com" class="btn btn-primary">Email Me</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2026 Vanshaj Arora. Crafted with focus and curiosity.</p>
-  </footer>
 </body>
 </html>
-
